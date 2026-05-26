@@ -9,9 +9,11 @@
     <%= post.content %>
   </div>
 
-  <div>
-    <strong>User:</strong>
-    <%= post.user_id %>
-  </div>
+  <% if user_signed_in? %>
+    <div>
+      <strong>User:</strong>
+      <%= post.user.username %>
+    </div>
+  <% end %>
 
 </div>
