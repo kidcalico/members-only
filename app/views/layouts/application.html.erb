@@ -24,13 +24,28 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
-    <% if user_signed_in? %>
-      <%= button_to "Log Out", destroy_user_session_path, method: :delete %>
-    <% else %>
-      <%= link_to "Log In", new_user_session_path %>
+    <% flash.each do |key, message| %>
+      <div class="<%= key %>">
+        <%= message %>
+      </div>
     <% end %>
+    <header>
+      <div class="logotype">
+        <%= image_tag "swatter-logo.png", alt: "Swatter Logo", id: "logo" %>
+        <h2>Swatter</h2>
+      </div>
+      <% if user_signed_in? %>
+        <%= button_to "Log Out", destroy_user_session_path, method: :delete %>
+      <% else %>
+        <%= link_to "Log In", new_user_session_path %>
+      <% end %>
+    </header>
+    <div class="content">
+      <%= yield %>
+    </div>
+    <footer>
+      Created by <a href="https://ryanmatthew.design">Kid Calico</a> for <a href="https://theodinproject.com">The Odin Project</a>, 2026.
+
+    </footer>
   </body>
 </html>
