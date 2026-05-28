@@ -19,7 +19,7 @@
 
 
 * {
-  background-color: #000;
+  background-color: #222;
   color: #FFF;
   font-family: "BT Carbon", 'Courier New', Courier, monospace;
   margin: 10px auto;
@@ -38,7 +38,12 @@ button {
   cursor: pointer;
 }
 
+.post > * {
+  background-color: #000;
+}
+
 .post {
+  background-color: #000;
   margin: 10px;
   padding: 10px;
   border: 1px solid #FFF;
