@@ -7,5 +7,7 @@ class User < ApplicationRecord
 
   validates :username, presence: true, uniqueness: true
 
+  before_save { self.username = username.downcase }
+
   has_many :posts
 end
