@@ -12,20 +12,24 @@
 
 @font-face {
   font-family: "BT Carbon";
-  src: url("<%= font_path("BTCarbon-Regular.woff2") %>") format('woff2');
+  /* src: url("<%= font_path("BTCarbon-Regular.woff2") %>") format('woff2');
   src: url("<%= font_path("BTCarbon-Regular.woff") %>") format('woff');
-  src: url("<%= font_path("BTCarbon-Regular.otf") %>") format('otf');
+  src: url("<%= font_path("BTCarbon-Regular.otf") %>") format('otf'); */
+  src: asset-path("BTCarbon-Regular.woff2") format('woff2');
+  src: asset-path("BTCarbon-Regular.woff") format('woff');
+  src: asset-path("BTCarbon-Regular.otf") format('opentype');
 }
 
 
 * {
+  font-family: "BT Carbon", 'Courier New', Courier, monospace;
   background-color: #222;
   color: #FFF;
-  font-family: "BT Carbon", 'Courier New', Courier, monospace;
   margin: 10px auto;
 }
 
 body {
+  font-family: "BT Carbon", 'Courier New', Courier, monospace;
   display: flex;
   flex-direction: column;
 }
@@ -38,7 +42,7 @@ button {
   cursor: pointer;
 }
 
-.post > * {
+.post * {
   background-color: #000;
 }
 
