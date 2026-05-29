@@ -15,9 +15,9 @@
   /* src: url("<%= font_path("BTCarbon-Regular.woff2") %>") format('woff2');
   src: url("<%= font_path("BTCarbon-Regular.woff") %>") format('woff');
   src: url("<%= font_path("BTCarbon-Regular.otf") %>") format('otf'); */
-  src: asset-path("BTCarbon-Regular.woff2") format('woff2');
-  src: asset-path("BTCarbon-Regular.woff") format('woff');
-  src: asset-path("BTCarbon-Regular.otf") format('opentype');
+  src: url("BTCarbon-Regular.woff2") format('woff2');
+  src: url("BTCarbon-Regular.woff") format('woff');
+  src: url("BTCarbon-Regular.otf") format('opentype');
 }
 
 
@@ -29,7 +29,6 @@
 }
 
 body {
-  font-family: "BT Carbon", 'Courier New', Courier, monospace;
   display: flex;
   flex-direction: column;
 }
